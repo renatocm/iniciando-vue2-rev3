@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instância Vue</title>
+</head>
+<body>
+    <div id="app">
+        {{ "Renato Alencar" }}
+        <input type="text" v-model="variavel">{{ variavel }}
+        <input type="text" v-model="variavel2">{{ variavel2 }}
+        <br>
+        soma {{ parseInt(variavel) + parseInt(variavel2) }}
+    </div>
+
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                variavel: 0,
+                variavel2: 0
+            }
+        })
+    </script>
+</body>
+</html>
